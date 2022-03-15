@@ -29,44 +29,7 @@ $ yarn global add truffle
 $ truffle init
 
 
-Create a file named DocRegistry.sol with the following content inside the contracts folder of the truffle project :- ( A sample of DocRegistry.sol is also available on Github Repository)
-
-
-pragma solidity ^0.5.6;
-
-contract DocRegistry {
-
-  struct Doc {
-      address sender;
-      uint date;
-      bytes32 hash;
-  }
-
-  /**
-   *  @dev Storage space used to record all documents
-   */
-  mapping(bytes32 => Doc) registry;
-
-  /**
-   *  @dev Store a document identified by its 32 bytes hash by recording the hash, the sender and date in the registry
-   *  @dev Emit an event HashStored in case of success
-   *  @param _hash Document hash
-   */
-  function storeHash(bytes32 _hash) external returns (bool) {
-    registry[_hash].sender = msg.sender;
-    registry[_hash].date = block.timestamp;
-    registry[_hash].hash = _hash;
-
-    emit HashStored(msg.sender, _hash);
-
-    return true;
-  }
-
-  /**
-   *  @dev Definition of the event triggered when a document is successfully stored in the registry
-   */
-  event HashStored(address indexed _sender, bytes32 _hash);
-}
+Create a file named DocRegistry.sol inside the contracts folder of the truffle project along with its content from the Github repository
 
 
 Step 4 :-
@@ -81,7 +44,7 @@ module.exports = function(deployer) {
 
 
 Step 5 :-
-Edit the content of the file truffle-config.js
+Edit the content of the file truffle-config.js with the following
 
 const HDWalletProvider = require('@truffle/hdwallet-provider'); //The mnemonic that you had copied in Step 1 is to be used here. 
 var mnemonic = "charger bitter knere juice camera smoke arrive accuse minimum juice artist exclude";
