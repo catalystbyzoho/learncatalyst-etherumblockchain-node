@@ -1,0 +1,29 @@
+{
+  "defaults": {
+    "project": 1,
+    "env": 1
+  },
+  "actives": {
+    "project": 1,
+    "env": 1
+  },
+  "projects": [
+    {
+      "idx": 1,
+      "id": "343000001292009",
+      "name": "Add2EthereumBlockchain",
+      "domain": {
+        "id": "10037887122",
+        "name": "add2ethereumblockchain-696722811.development"
+      },
+      "env": [
+        {
+          "idx": 1,
+          "id": "696722811",
+          "name": "Development",
+          "type": 3
+        }
+      ]
+    }
+  ]
+}

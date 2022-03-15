@@ -1,0 +1,9 @@
+{
+  "functions": {
+    "targets": [
+      "add_to_ethereum_blockchain_function"
+    ],
+    "ignore": [],
+    "source": "functions"
+  }
+}
